@@ -1,0 +1,636 @@
+/*!*!** {*!*!*/
+/*!*!*    margin: 0;*!*!*/
+/*!*!*    padding: 0;*!*!*/
+/*!*!*    box-sizing: border-box;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*body, html {*!*!*/
+/*!*!*    height: 100%;*!*!*/
+/*!*!*    font-family: Arial, sans-serif;*!*!*/
+/*!*!*    color: #FFFFFF;*!*!*/
+/*!*!*    background-color: #1E1E2D;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.container {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    height: 100vh;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.sidebar {*!*!*/
+/*!*!*    width: 250px;*!*!*/
+/*!*!*    background-color: #2A2A40;*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    flex-direction: column;*!*!*/
+/*!*!*    justify-content: space-between;*!*!*/
+/*!*!*    padding: 20px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.logo {*!*!*/
+/*!*!*    font-size: 18px;*!*!*/
+/*!*!*    font-weight: bold;*!*!*/
+/*!*!*    color: #FFFFFF;*!*!*/
+/*!*!*    margin-bottom: 20px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*nav a {*!*!*/
+/*!*!*    display: block;*!*!*/
+/*!*!*    padding: 10px 0;*!*!*/
+/*!*!*    color: #A5A5C1;*!*!*/
+/*!*!*    text-decoration: none;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*nav a.active, nav a:hover {*!*!*/
+/*!*!*    color: #FFFFFF;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.support {*!*!*/
+/*!*!*    margin-top: 20px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.user-profile {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    align-items: center;*!*!*/
+/*!*!*    margin-top: 20px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.user-icon {*!*!*/
+/*!*!*    width: 40px;*!*!*/
+/*!*!*    height: 40px;*!*!*/
+/*!*!*    border-radius: 50%;*!*!*/
+/*!*!*    background-color: #FFFFFF;*!*!*/
+/*!*!*    color: #2A2A40;*!*!*/
+/*!*!*    font-weight: bold;*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    align-items: center;*!*!*/
+/*!*!*    justify-content: center;*!*!*/
+/*!*!*    margin-right: 10px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.user-details {*!*!*/
+/*!*!*    font-size: 12px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*main {*!*!*/
+/*!*!*    flex: 1;*!*!*/
+/*!*!*    padding: 20px;*!*!*/
+/*!*!*    background-color: #1E1E2D;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*header {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    justify-content: space-between;*!*!*/
+/*!*!*    align-items: center;*!*!*/
+/*!*!*    margin-bottom: 20px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.header-controls {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    align-items: center;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.header-controls select {*!*!*/
+/*!*!*    background-color: #2A2A40;*!*!*/
+/*!*!*    color: #FFFFFF;*!*!*/
+/*!*!*    border: none;*!*!*/
+/*!*!*    padding: 5px;*!*!*/
+/*!*!*    margin-right: 10px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.filter-panel {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    gap: 10px;*!*!*/
+/*!*!*    background-color: #2A2A40;*!*!*/
+/*!*!*    padding: 15px;*!*!*/
+/*!*!*    border-radius: 8px;*!*!*/
+/*!*!*    margin-bottom: 20px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.filter-panel label {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    flex-direction: column;*!*!*/
+/*!*!*    color: #A5A5C1;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.filter-panel select {*!*!*/
+/*!*!*    background-color: #3A3A52;*!*!*/
+/*!*!*    color: #FFFFFF;*!*!*/
+/*!*!*    border: none;*!*!*/
+/*!*!*    padding: 5px;*!*!*/
+/*!*!*    border-radius: 4px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.hidden {*!*!*/
+/*!*!*    display: none;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.dashboard-cards {*!*!*/
+/*!*!*    display: grid;*!*!*/
+/*!*!*    grid-template-columns: repeat(3, 1fr);*!*!*/
+/*!*!*    gap: 10px;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.card {*!*!*/
+/*!*!*    height: 200px;*!*!*/
+/*!*!*    background-color: #2A2A40;*!*!*/
+/*!*!*    border-radius: 8px;*!*!*/
+/*!*!*}*!*!*/
+
+
+/*!** {*!*/
+/*!*    margin: 0;*!*/
+/*!*    padding: 0;*!*/
+/*!*    box-sizing: border-box;*!*/
+/*!*}*!*/
+
+/*!*body, html {*!*/
+/*!*    height: 100%;*!*/
+/*!*    font-family: Arial, sans-serif;*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*    background-color: #1E1E2D;*!*/
+/*!*}*!*/
+
+/*!*.container {*!*/
+/*!*    display: flex;*!*/
+/*!*    height: 100vh;*!*/
+/*!*}*!*/
+
+/*!*.sidebar {*!*/
+/*!*    width: 220px;*!*/
+/*!*    background-color: #2A2A40;*!*/
+/*!*    display: flex;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    justify-content: flex-start; !* Align items to the top *!*!*/
+/*!*    padding: 20px;*!*/
+/*!*}*!*/
+
+/*!*.logo {*!*/
+/*!*    font-size: 18px;*!*/
+/*!*    font-weight: bold;*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*    margin-bottom: 30px;*!*/
+/*!*}*!*/
+
+/*!*nav {*!*/
+/*!*    margin-top: 20px; !* Add top margin to separate nav links from the logo *!*!*/
+/*!*}*!*/
+
+/*!*nav a {*!*/
+/*!*    display: block;*!*/
+/*!*    padding: 10px 0;*!*/
+/*!*    font-size: 14px;*!*/
+/*!*    color: #A5A5C1;*!*/
+/*!*    text-decoration: none;*!*/
+/*!*    font-weight: 500;*!*/
+/*!*}*!*/
+
+/*!*nav a.active, nav a:hover {*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*}*!*/
+
+/*!*.support {*!*/
+/*!*    margin-top: auto; !* Push support links to the bottom of the sidebar *!*!*/
+/*!*    font-size: 13px;*!*/
+/*!*    color: #A5A5C1;*!*/
+/*!*    padding-top: 10px; !* Add some spacing at the top of support section *!*!*/
+/*!*}*!*/
+
+/*!*.support a {*!*/
+/*!*    text-decoration: none;*!*/
+/*!*    color: #A5A5C1;*!*/
+/*!*}*!*/
+
+/*!*.support a:hover {*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*}*!*/
+
+/*!*.user-profile {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    margin-top: 10px; !* Adjust spacing above user profile *!*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*}*!*/
+
+/*!*.user-icon {*!*/
+/*!*    width: 40px;*!*/
+/*!*    height: 40px;*!*/
+/*!*    border-radius: 50%;*!*/
+/*!*    background-color: #A5A5C1;*!*/
+/*!*    color: #2A2A40;*!*/
+/*!*    font-weight: bold;*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    margin-right: 10px;*!*/
+/*!*    font-size: 16px;*!*/
+/*!*}*!*/
+
+/*!*.user-details {*!*/
+/*!*    font-size: 12px;*!*/
+/*!*    line-height: 1.2;*!*/
+/*!*}*!*/
+
+/*!*main {*!*/
+/*!*    flex: 1;*!*/
+/*!*    padding: 20px;*!*/
+/*!*    background-color: #1E1E2D;*!*/
+/*!*}*!*/
+
+/*!*header {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: space-between;*!*/
+/*!*    align-items: center;*!*/
+/*!*    margin-bottom: 20px;*!*/
+/*!*}*!*/
+
+/*!*.header-controls {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*}*!*/
+
+/*!*.header-controls select {*!*/
+/*!*    background-color: #2A2A40;*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*    border: none;*!*/
+/*!*    padding: 5px;*!*/
+/*!*    margin-right: 10px;*!*/
+/*!*}*!*/
+
+/*!*.filter-panel {*!*/
+/*!*    display: flex;*!*/
+/*!*    gap: 10px;*!*/
+/*!*    background-color: #2A2A40;*!*/
+/*!*    padding: 15px;*!*/
+/*!*    border-radius: 8px;*!*/
+/*!*    margin-bottom: 20px;*!*/
+/*!*}*!*/
+
+/*!*.filter-panel label {*!*/
+/*!*    display: flex;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    color: #A5A5C1;*!*/
+/*!*    font-size: 13px;*!*/
+/*!*}*!*/
+
+/*!*.filter-panel select {*!*/
+/*!*    background-color: #3A3A52;*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*    border: none;*!*/
+/*!*    padding: 5px;*!*/
+/*!*    border-radius: 4px;*!*/
+/*!*}*!*/
+
+/*!*.hidden {*!*/
+/*!*    display: none;*!*/
+/*!*}*!*/
+
+/*!*.dashboard-cards {*!*/
+/*!*    display: grid;*!*/
+/*!*    grid-template-columns: repeat(3, 1fr);*!*/
+/*!*    gap: 10px;*!*/
+/*!*}*!*/
+
+/*!*.card {*!*/
+/*!*    height: 200px;*!*/
+/*!*    background-color: #2A2A40;*!*/
+/*!*    border-radius: 8px;*!*/
+/*!*}*!*/
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*body, html {*/
+/*    height: 100%;*/
+/*    font-family: Arial, sans-serif;*/
+/*    color: #FFFFFF;*/
+/*    background-color: #1E1E2D;*/
+/*}*/
+
+/*.container {*/
+/*    display: flex;*/
+/*    height: 100vh;*/
+/*}*/
+
+/*.sidebar {*/
+/*    width: 220px;*/
+/*    background-color: #2A2A40;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.logo {*/
+/*    font-size: 18px;*/
+/*    font-weight: bold;*/
+/*    color: #FFFFFF;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*nav {*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*nav a {*/
+/*    display: block;*/
+/*    padding: 10px 0;*/
+/*    font-size: 14px;*/
+/*    color: #A5A5C1;*/
+/*    text-decoration: none;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*nav a.active, nav a:hover {*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+/*.support {*/
+/*    margin-top: auto;*/
+/*    font-size: 13px;*/
+/*    color: #A5A5C1;*/
+/*    padding-top: 10px;*/
+/*}*/
+
+/*.support a {*/
+/*    text-decoration: none;*/
+/*    color: #A5A5C1;*/
+/*}*/
+
+/*.support a:hover {*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+/*.user-profile {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    margin-top: 10px;*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+/*.user-icon {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #A5A5C1;*/
+/*    color: #2A2A40;*/
+/*    font-weight: bold;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    margin-right: 10px;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.user-details {*/
+/*    font-size: 12px;*/
+/*    line-height: 1.2;*/
+/*}*/
+
+/*main {*/
+/*    flex: 1;*/
+/*    padding: 20px;*/
+/*    background-color: #1E1E2D;*/
+/*}*/
+
+/*header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.header-controls {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.header-controls select {*/
+/*    background-color: #2A2A40;*/
+/*    color: #FFFFFF;*/
+/*    border: none;*/
+/*    padding: 5px;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+/*.filter-panel {*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*    background-color: #2A2A40;*/
+/*    padding: 15px;*/
+/*    border-radius: 8px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.filter-panel label {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    color: #A5A5C1;*/
+/*    font-size: 13px;*/
+/*}*/
+
+/*.filter-panel select {*/
+/*    background-color: #3A3A52;*/
+/*    color: #FFFFFF;*/
+/*    border: none;*/
+/*    padding: 5px;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*.hidden {*/
+/*    display: none;*/
+/*}*/
+
+/*.dashboard-cards {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.card {*/
+/*    height: 200px;*/
+/*    background-color: #23233C; !* Darker color for the background of cards *!*/
+/*    border-radius: 8px;*/
+/*    padding: 20px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); !* Shadow effect for depth *!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.card canvas {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    max-height: 160px; !* Adjust the max height to fit within the card *!*/
+/*}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    background-color: #1E1E2D;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #2A2A40;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #A5A5C1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a.active, nav a:hover {
+    color: #FFFFFF;
+}
+
+.support {
+    margin-top: auto;
+    font-size: 13px;
+    color: #A5A5C1;
+    padding-top: 10px;
+}
+
+.support a {
+    text-decoration: none;
+    color: #A5A5C1;
+}
+
+.support a:hover {
+    color: #FFFFFF;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #A5A5C1;
+    color: #2A2A40;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.user-details {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #1E1E2D;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+.header-controls select {
+    background-color: #2A2A40;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.filter-panel {
+    display: flex;
+    gap: 10px;
+    background-color: #2A2A40;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-panel label {
+    display: flex;
+    flex-direction: column;
+    color: #A5A5C1;
+    font-size: 13px;
+}
+
+.filter-panel select {
+    background-color: #3A3A52;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    height: 200px;
+    background-color: #23233C;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card canvas {
+    width: 100%;
+    height: 100%;
+    max-height: 160px;
+}

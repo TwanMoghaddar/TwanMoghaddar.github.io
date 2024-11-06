@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Orders Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo">INTERSTELLAR</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Orders</a>
+            <a href="#">Clients</a>
+            <a href="#">Billing</a>
+        </nav>
+        <div class="support">
+            <a href="#">Support</a>
+            <a href="#">User Manual</a>
+        </div>
+        <div class="user-profile">
+            <div class="user-icon">AM</div>
+            <div class="user-details">
+                <span>Antoine Moghaddar</span>
+                <span>antoine.moghaddar@interstellar.nl</span>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <header>
+            <h1>Welcome back, Antoine</h1>
+            <div class="header-controls">
+                <select>
+                    <option>Last 12 Months</option>
+                    <option>Last 6 Months</option>
+                    <option>Last 3 Months</option>
+                </select>
+                <button id="filter-toggle" onclick="toggleFilterPanel()">
+                    <img src="filter-icon.png" alt="Filter Icon">
+                </button>
+            </div>
+        </header>
+
+        <section id="filter-panel" class="filter-panel hidden">
+            <label>Entity
+                <select>
+                    <option>Interstellar Ops</option>
+                    <option>ELIMINATIE</option>
+                    <option>Solimas</option>
+                    <option>Interstellar ITS</option>
+                </select>
+            </label>
+            <label>Type Relation
+                <select>
+                    <option>[Empty]</option>
+                    <option>InterCompany</option>
+                    <option>Other</option>
+                </select>
+            </label>
+            <label>Category
+                <select>
+                    <option>Products</option>
+                    <option>Project Services</option>
+                    <option>Professional Services</option>
+                    <option>Other</option>
+                </select>
+            </label>
+            <label>Nature
+                <select>
+                    <option>Turnover Recurrent</option>
+                    <option>Turnover Non-Recurrent</option>
+                </select>
+            </label>
+            <label>Client
+                <select>
+                    <option>AskRoger B.V.</option>
+                    <option>B-Critical B.V.</option>
+                    <option>Blockx B.V.</option>
+                    <option>BNQ B.V.</option>
+                    <option>CSN Groep B.V.</option>
+                    <option>DataByte B.V.</option>
+                    <option>Databyte Business Solutions B.V.</option>
+                    <option>DataExpert APS</option>
+                    <option>DataExpert B.V.</option>
+                    <option>DataExpert Holding B.V.</option>
+                    <option>DiEx B.V.</option>
+                    <option>Direct ICT B.V.</option>
+                    <option>dotXS Automatisering B.V.</option>
+                    <option>Exite Holding B.V.</option>
+                    <option>Interstellar IT Services B.V.</option>
+                    <option>Ferdinand Holding B.V.</option>
+                    <option>FES AB</option>
+                    <option>Fundaments B.V.</option>
+                    <option>Fundaments Holding B.V.</option>
+                    <option>Interstellar Group B.V.</option>
+                    <option>Interstellar Zuid B.V.</option>
+                    <option>JDN ICT Services B.V.</option>
+                    <option>Lammers B.V.</option>
+                    <option>Meetingstore B.V.</option>
+                    <option>MNQ B.V.</option>
+                    <option>NetData Systems B.V.</option>
+                    <option>New @Adventures B.V.</option>
+                    <option>Oxilion B.V.</option>
+                    <option>Oxilion Enterprise B.V.</option>
+                    <option>Oxilion Infrastructure B.V.</option>
+                    <option>Pinewood B.V.</option>
+                    <option>Qconferencing B.V.</option>
+                    <option>Qconferencing Holding B.V.</option>
+                    <option>Raak! ICT B.V. (EOL)</option>
+                    <option>Site4U B.V.</option>
+                    <option>Solimas B.V.</option>
+                    <option>Solutive B.V.</option>
+                    <option>TimCom B.V.</option>
+                    <option>VANESSEN ICT B.V.</option>
+                    <option>VDB Automatisering B.V. (EOL)</option>
+                    <option>Cloud Security Group B.V.</option>
+                    <option>CSN Delft</option>
+                    <option>Datamex Automatisering B.V.</option>
+                    <option>DotXS B.V.</option>
+                    <option>Felton B.V.</option>
+                    <option>Interstellar Housing B.V.</option>
+                    <option>RawHolding B.V.</option>
+                    <option>RawServices B.V.</option>
+                    <option>RawWorks B.V.</option>
+                    <option>SCCT B.V.</option>
+                    <option>SCCT Digital B.V.</option>
+                    <option>SCCT Holding B.V.</option>
+                    <option>SCCT L&S B.V.</option>
+                    <option>SCCT MCS B.V.</option>
+                    <option>SCCT Staffing B.V.</option>
+                    <option>Raak! ICT B.V.</option>
+                    <option>VDB Automatisering B.V.</option>
+                    <option>z.AR (elim)</option>
+                    <option>z.COL (elim)</option>
+                    <option>Z.CSN (elim)</option>
+                    <option>z.Datab (elim)</option>
+                    <option>z.DataE (elim)</option>
+                    <option>z.Exite (elim)</option>
+                    <option>z.Felton (elim)</option>
+                    <option>z.FUN (elim)</option>
+                    <option>z.GROUP (elim)</option>
+                    <option>z.MNQ (elim)</option>
+                    <option>z.MSP (elim)</option>
+                    <option>z.Pine (elim)</option>
+                    <option>z.Qcon (elim)</option>
+                    <option>z.Rawworks (elim)</option>
+                    <option>z.SCCT (elim)</option>
+                    <option>z.Security (elim)</option>
+                    <option>z.SOL (elim)</option>
+                    <option>CSN Groep B.V. (AFAS)</option>
+                    <option>z.IITS (elim)</option>
+                </select>
+            </label>
+        </section>
+
+
+        <section class="dashboard-cards">
+            <div class="card">
+                <canvas id="chart1"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="chart2"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="chart3"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="chart4"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="chart5"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="chart6"></canvas>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
